@@ -1,0 +1,11 @@
+body{
+  background-image: url(p6.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.main{
+  width: 360px;
+  padding: 10% 0 0;
+  margin: auto;
+}

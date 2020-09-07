@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Citizens Information</title>
+    <link rel="stylesheet" href="sample.css">
+  </head>
+  <script text="text/javascript">
+  function add_field()
+  {
+    var total_text=document.getElementsByClassName("input_text");
+    total_text=total_text.length+1;
+    document.getElementById("field_div").innerHTML=document.getElementById("field_div").innerHTML+
+    "<p id='input_text"+total_text+"_wrapper'>Name<input type='text' class='input_text' id='input_text"+total_text+"' placeholder='Enter Text'>Age<input type='text' class='input_text' id='input_text"+total_text+"' placeholder='Enter Text'>Job<input type='text' class='input_text' id='input_text"+total_text+"' placeholder='Enter Text'><input type='button' value='Remove' onclick=remove_field('input_text"+total_text+"');></p>";
+  }
+  function remove_field(id)
+  {
+    document.getElementById(id+"_wrapper").innerHTML="";
+  }
+  </script>
+  <body>
+    <div id="wrapper">
+    <div id="field_div">
+      <form align="center" action="conn.php" method="POST">
+    House No <input type="text" name="house" placeholder="House No">
+
+    No.of membres <input type="number" name="number" placeholder="number"></br>
+
+  <input type="button" value="Add TextBox" onclick="add_field();">
+  <input type="submit" name="submit">
+</form>
+  </body>
+</html>
